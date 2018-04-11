@@ -107,7 +107,8 @@ def Non_Zero_Extrema(image_extremumList,image1,n):
         sigma_nonzero.append(image_sigmaList)
     plt.gray()
     plt.figure(n+1)
-    plt.imshow(image1)
+    image2=np.zeros(np.shape(image1))
+    plt.imshow(image2)
     for i in range(octaves):
         for j in range(0,2):
             for l in range(len(extremum_nonzero[i][j])):
@@ -223,7 +224,8 @@ def Accurate_Extrema(sigma_nonzero,extremum_nonzero,
         extremum_points.append(image_scaleList)
     plt.gray()
     plt.figure(n+2)
-    plt.imshow(image1)
+    image2=np.zeros(np.shape(image1))
+    plt.imshow(image2)
     
     for i in range(octaves):
         for j in range(2):
@@ -334,7 +336,8 @@ def Image_Descriptor(image_octaveList,extremum_points,image1,n):
     const = 3
     plt.gray()
     plt.figure(n+3)
-    plt.imshow(image1)
+    image2=np.zeros(np.shape(image1))
+    plt.imshow(image2)
             
     for i in range(octaves):
         for j in range(2):
